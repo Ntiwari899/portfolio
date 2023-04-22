@@ -4,9 +4,10 @@ const navlink=document.querySelectorAll('header nav a')
 window.onscroll=()=>{
     section.forEach(sec=>{
         let top=window.scrollY;
+        console.log(window.scrollY);
         let offset=offsetTop - 150;
         let height=sec.offsetHeight;
-        let id=sec.getAttribute('id')
+        let id=sec.getAttribute('menu')
         if(top>=offset && top< offset + height){
             navlink.forEach(links=>{
                 links.classlist.remover('active')
@@ -16,9 +17,9 @@ window.onscroll=()=>{
     })
     // <!-- ==================================CREATE A STICKY NAV BAR====================================== -->
  var header=document.querySelector('header')
-header.classlist.toggle("sticky",window.scroll>100)
-menubar.classlist.remove('bx-x')
-navbar.classlist.remove('active')
+ header.classlist.toggle("sticky",window.scroll>100)
+ menubar.classlist.remove('bx-x')
+ navbar.classlist.remove('active')
 };
   // <!-- ==================================CREATE A TOOGLE CHANGER====================================== -->
 let menubar=document.querySelector('#menu')
