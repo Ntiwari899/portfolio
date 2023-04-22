@@ -117,6 +117,7 @@ menu{
 }
 
 .home-detail p{
+    text-align: justify;
     font-size: 2.5rem;
     word-wrap:inherit;
     opacity: 1;
@@ -221,6 +222,7 @@ span{
     width: 25vw;
 }
 .about{
+    margin-top: -10em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,6 +242,7 @@ span{
 .about-section p{
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+    text-align: justify;
 }
 .about-section a{
     font-size: 20px;
@@ -447,7 +450,8 @@ form .btn{
         padding: 10rem 3% 2rem;
     }
     .home .home-img{
-      width: 30vw;
+      /* width: 30vw; */
+      position: relative;
     }
     .footer{
         padding: 2rem 3%;
@@ -520,7 +524,19 @@ form .btn{
     .portfolio .portfolio-section{
         grid-template-columns: repeat(1,1fr);
     }
-
+    .home{
+        margin-top: 5em;
+        /* flex-direction: column; */
+    }
+    .home-img img {
+        left: -17em;
+        top: -21em;
+        position: absolute;
+        width: 40vw;
+    }
+    .logo span{
+        display: none;
+    }
 }
 
 @media(max-width:450px){
@@ -533,10 +549,11 @@ form .btn{
 }
 @media(max-width:368px){
     .home-img img{
-        width: 25vw;
+        /* width: 25vw; */
     }
     .about-img img{
-        width: auto90vw;
+display: none;
+        width: auto 90vw;
     }
     .footer{
         flex-direction: column-reverse;
