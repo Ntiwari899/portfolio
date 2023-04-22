@@ -537,6 +537,10 @@ form .btn{
     .logo span{
         display: none;
     }
+    .about-img img{
+        display: none;
+                width: auto 90vw;
+            }
 }
 
 @media(max-width:450px){
